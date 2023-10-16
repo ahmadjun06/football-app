@@ -1,0 +1,47 @@
+.liveresult {
+  width: 100px;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.paragraph {
+  margin: 0;
+  position: absolute;
+  left: 300px;
+  top: 7px;
+  color: #666666;
+}
+.photo {
+  width: 205px;
+  position: absolute;
+}
+.header {
+  height: 40px;
+  position: relative;
+  flex-wrap: nowrap;
+  display: flex;
+}
+.gift {
+  width: 25px;
+  position: absolute;
+  right: 400px;
+}
+
+.search{
+    position: absolute;
+    right: 100px;
+    top: 5px;
+}
+
+.profile{
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+.link{
+text-decoration: none;
+color: #0066CC;
+}
