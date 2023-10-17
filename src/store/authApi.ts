@@ -55,7 +55,7 @@ export const authApi = createApi({
       query: (payload) => {
         return {
           url: "/matches",
-          method: "POST",
+          method: "GET",
           body: payload,
         };
       },
