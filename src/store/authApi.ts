@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { baseQuery } from "../store/utils/baseQuery";
 
 interface MatchDay {
-  dateFrom: number;
+  dateFrom: string;
   resultSet: string;
   dateTo: string;
 }
