@@ -20,7 +20,7 @@ export const Football = () => {
           <input type="search" />
         </div>
         <div className="profile">
-          <Link className="link" to={"/profile"}>Профиль</Link>
+          <Link className="link" to={""}>Профиль</Link>
         </div>
       </div>
     </div>

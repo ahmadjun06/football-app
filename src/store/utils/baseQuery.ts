@@ -1,3 +1,1 @@
-export const baseQuery = "https://api.football-data.org/v4";
-
-// легче всего будет переписать через redux toolkit
+export const baseQuery = "https://api.soccersapi.com/v2.2/"

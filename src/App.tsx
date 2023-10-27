@@ -6,12 +6,10 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme/theme";
 import { store } from "./store/store";
-import { ProfilePage } from "./pages/ProfilePage/ProfilePage";
 import { PremierLeague } from "./components/PremierLeague/PremierLeague";
 import { LaLiga } from "./components/LaLiga/LaLiga";
 import { SeriaA } from "./components/SeriaA/SeriaA";
 import { Bundesliga } from "./components/Bundesliga/Bundesliga";
-import { Match } from "./pages/Match/Match";
 import { Chempionsleague } from "./components/Chempionsleague/Chempionsleague";
 
 const App: React.FC = () => {
@@ -19,14 +17,6 @@ const App: React.FC = () => {
     {
       path: "/",
       element: <LoginPage />,
-    },
-    {
-      path: "/profile",
-      element: <ProfilePage />,
-    },
-    {
-      path: "/main",
-      element: <Match />,
     },
     {
       path: "/championsleague",

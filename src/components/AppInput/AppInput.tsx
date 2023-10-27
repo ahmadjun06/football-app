@@ -3,7 +3,7 @@ import { ThemeInput, ThemeInputError } from "./AppInput.style";
 import { LoginForm } from "../LoginForm/LoginForm";
 
 interface AppInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  type: "tel" | "password" | "text" | "email" | "search";
+  type: "tel" | "password" | "text" | "email" | "search" | "username";
   inputPlaceholder: string;
   isError?: boolean;
   errorText?: string;

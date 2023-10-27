@@ -9,11 +9,6 @@ export const LiveResult = () => {
     <div className="">
       <div className="live">
         <div className="container">
-          <div className="match">
-            <Link to={"/main"} className="linklive">
-              Матчи
-            </Link>
-          </div>
           <div className="chempions-league">
             <Link to={"/championsleague"} className="linklive">
               Лига чемпинов

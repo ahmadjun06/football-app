@@ -2,12 +2,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { baseQuery } from "../store/utils/baseQuery";
 
 interface MatchDay {
-  dateFrom: string;
-  resultSet: string;
-  dateTo: string;
+  data:[],
 }
-
-interface MatchResult extends MatchDay {}
 
 interface LoginUserPayload {
   email: string;
@@ -19,56 +15,33 @@ interface LoginUserData {
   user_id: number;
 }
 
-interface RegistrationUserPayload {
-  name: string;
-  email: string;
-  phone_number: string;
-  password: string;
-  user_city: string;
-}
-
-interface RegistrationUserData extends LoginUserData {}
-
 export const authApi = createApi({
   reducerPath: "authApi",
-  baseQuery: fetchBaseQuery({ baseUrl: baseQuery }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: baseQuery,
+  }),
   endpoints: (builder) => ({
-    addUser: builder.mutation<RegistrationUserData, RegistrationUserPayload>({
-      query: (payload) => {
-        return {
-          url: "/registration",
-          method: "POST",
-          body: payload,
-        };
-      },
-    }),
-    loginUser: builder.mutation<LoginUserData, LoginUserPayload>({
-      query: (payload) => {
-        return {
-          url: "/login",
-          method: "POST",
-          body: payload,
-        };
-      },
-    }),
-    matchDay: builder.mutation<MatchDay, MatchResult>({
-      query: (payload) => {
-        return {
-          url: "/matches",
-          method: "GET",
-          body: payload,
-        };
-      },
-    }),
-    getUser: builder.query({
-      query: (userId: string) => `/user/${userId}`,
+    matchDay: builder.query<MatchDay, any>({
+      query: () => ({
+        url: "leagues/?user=ahmadjonabdumajidov627&token=d317aba093d7350684ea085657d2baf0&t=list&page=1",
+      }),
     }),
   }),
 });
 
-export const {
-  useAddUserMutation,
-  useLoginUserMutation,
-  useGetUserQuery,
-  useMatchDayMutation,
-} = authApi;
+export const { useMatchDayQuery } =
+  authApi;
+
+  // id: number,
+  // cc: string,
+  // continent_id: number,
+  // continent_name: string,
+  // country_id: number,
+  // country_name: string,
+  // current_round_id: number,
+  // current_season_id: number,
+  // current_stage_id: number,
+  // is_amateur: number,
+  // is_cup: string,
+  // is_friendly: string,
+  // name: string,

@@ -1,0 +1,18 @@
+.loginPage {
+  position: relative;
+  background-image: url("https://phonoteka.org/uploads/posts/2022-01/1643275778_59-phonoteka-org-p-fon-dlya-fotoshopa-futbol-61.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 645px;
+}
+
+.loginPageChildren {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 465px;
+  padding-top: 40px;
+}
