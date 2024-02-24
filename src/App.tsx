@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import { Provider } from "react-redux";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -11,6 +10,7 @@ import { LaLiga } from "./components/LaLiga/LaLiga";
 import { SeriaA } from "./components/SeriaA/SeriaA";
 import { Bundesliga } from "./components/Bundesliga/Bundesliga";
 import { Chempionsleague } from "./components/Chempionsleague/Chempionsleague";
+import { Profile } from "./pages/Profile/Profile";
 
 const App: React.FC = () => {
   const router = createBrowserRouter([
@@ -39,6 +39,10 @@ const App: React.FC = () => {
     {
       path: "/bundesliga",
       element: <Bundesliga />,
+    },
+    {
+      path: "/profile",
+      element: <Profile />,
     },
   ]);
 

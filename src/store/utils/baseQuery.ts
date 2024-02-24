@@ -1,1 +1,1 @@
-export const baseQuery = "https://api.soccersapi.com/v2.2/"
+export const baseQuery = "https://apiv3.apifootball.com/"

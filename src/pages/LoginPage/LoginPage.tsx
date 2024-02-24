@@ -33,10 +33,10 @@ export const LoginPage = () => {
   });
 
   const onLoginSubmit = (data: LoginForm) => {
-    if (data.username === "Ahmadjon" && data.userpassword === "12345") {
+    if (data.username === "Ahmadjon Abdumajidov" && data.userpassword === "12345") {
       localStorage.setItem("username", data.username);
       localStorage.setItem("userpassword", data.userpassword);
-      navigate("/championsleague");
+      navigate("/premierleague");
     } else {
     }
   };
@@ -48,7 +48,7 @@ export const LoginPage = () => {
         <form onSubmit={handleSubmit(onLoginSubmit)}>
           <AppInput
             type="username"
-            inputPlaceholder="Email адрес"
+            inputPlaceholder="Имя Фамилия"
             {...register("username")}
           />
           <AppInput
@@ -59,9 +59,6 @@ export const LoginPage = () => {
           <AppButton buttonText="Войти" className="button" type="submit" />
         </form>
       </div>
-      {/* <AppModal actve={modal} modalText={"ne adasd ads"} setActive={function (): {} {
-        throw new Error("Function not implemented.");
-      } } /> */}
     </div>
   );
 };

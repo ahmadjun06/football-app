@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./LiveResult.scss";
 import { Link } from "react-router-dom";
 
 export const LiveResult = () => {
-  const [active, setActive] = useState(false);
-
   return (
     <div className="">
       <div className="live">

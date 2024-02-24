@@ -1,47 +1,24 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { baseQuery } from "../store/utils/baseQuery";
-
-interface MatchDay {
-  data:[],
-}
-
-interface LoginUserPayload {
-  email: string;
-  password: string;
-}
-
-interface LoginUserData {
-  status: number;
-  user_id: number;
-}
+import {  baseQuery } from "./utils/baseQuery";
 
 export const authApi = createApi({
-  reducerPath: "authApi",
+  reducerPath: "authApi2",
   baseQuery: fetchBaseQuery({
     baseUrl: baseQuery,
   }),
   endpoints: (builder) => ({
-    matchDay: builder.query<MatchDay, any>({
+    matchDayVideo: builder.query<any, any>({
       query: () => ({
-        url: "leagues/?user=ahmadjonabdumajidov627&token=d317aba093d7350684ea085657d2baf0&t=list&page=1",
+        url: "?action=get_standings&league_id=302&APIkey=20382f7933abedd162edb40d9ce95d7daf72a866554a3de32c7a6fa1d932fe79",
       }),
     }),
+    standingPremierLeague: builder.query<any, any>({
+      query:()=>({
+        url: "?action=get_standings&league_id=152&APIkey=20382f7933abedd162edb40d9ce95d7daf72a866554a3de32c7a6fa1d932fe79"
+      })
+    })
   }),
 });
 
-export const { useMatchDayQuery } =
+export const { useMatchDayVideoQuery, useStandingPremierLeagueQuery } =
   authApi;
-
-  // id: number,
-  // cc: string,
-  // continent_id: number,
-  // continent_name: string,
-  // country_id: number,
-  // country_name: string,
-  // current_round_id: number,
-  // current_season_id: number,
-  // current_stage_id: number,
-  // is_amateur: number,
-  // is_cup: string,
-  // is_friendly: string,
-  // name: string,

@@ -5,6 +5,7 @@ type StyledInput = {
 };
 
 export const ThemeInput = styled.input<StyledInput>`
+  color: ${(props) => props.theme.colors.white};
   height: 50px;
   width: calc(5vw + 250px);
   margin-right: auto;
@@ -29,8 +30,10 @@ export const ThemeInput = styled.input<StyledInput>`
   ${(props) =>
     props.is &&
     `
-border-color: ${props.theme.colors.red} ;
-`}
+      border-color: ${props.theme.colors.red} ;
+      `}
+  ::placeholder {
+  }
 `;
 
 export const ThemeInputError = styled.span<StyledInput>`

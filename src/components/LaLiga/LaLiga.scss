@@ -1,11 +1,37 @@
 .laLiga {
-  position: relative;
   background-image: url("https://digitalshift-assets.sfo2.cdn.digitaloceanspaces.com/pw/4580dadf-e788-4fa5-a1a4-8504266f1993/p-b7572c81-5753-417c-a065-c4833baae321/1565911815-full.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 645px;
+  height: 100%;
 }
 .laLigaChildren{
   padding: 20px 10px;
+}
+
+
+.content-tables {
+  background-color: #009879;
+  color: white;
+  border-collapse: collapse;
+  margin-top: 25px;
+  padding-bottom: 25px;
+  font-size: 1em;
+  text-align: left;
+}
+.content-tables thead tr {
+  background-color: aqua;
+  font-weight: bold;
+}
+
+.content-tables th,
+.content-tables td {
+  padding: 5px;
+  border-bottom: 1px solid white;
+}
+td{
+  padding-bottom: 10px;
+}
+img{
+  width: 10%;
 }
